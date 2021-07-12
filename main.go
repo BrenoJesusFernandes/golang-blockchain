@@ -3,7 +3,6 @@ package main
 import (
 	"flag"
 	"fmt"
-	"github.com/dgraph-io/badger"
 	"github.com/fernandesbreno/golang-blockchain/blockchain"
 	"os"
 	"runtime"
@@ -89,12 +88,7 @@ func (cli *CommandLine) run() {
 func main() {
 	defer os.Exit(0)
 	chain := blockchain.InitBlockChain()
-	defer func(Database *badger.DB) {
-		err := Database.Close()
-		if err != nil {
-
-		}
-	}(chain.Database)
+	defer chain.Database.Close()
 
 	cli := CommandLine{chain}
 
