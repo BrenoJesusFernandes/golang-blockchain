@@ -10,7 +10,7 @@ import (
 	"math/big"
 )
 
-const Difficulty = 24
+const Difficulty = 18
 
 type ProofOfWork struct {
 	Block  *Block
@@ -53,6 +53,7 @@ func (pow *ProofOfWork) Run() (int, []byte) {
 		fmt.Printf("\r%x", hash)
 		intHash.SetBytes(hash[:])
 
+		// Checa se o novo numero gerado é menor que a dificuldade escolhida 2**256-dificuldade
 		if intHash.Cmp(pow.Target) == -1 {
 			break
 		} else {
