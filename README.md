@@ -1,6 +1,7 @@
-# golang-blockchain
+# Blockchain
+
 <p align="center">
-Blockchain
+Blockchain in Golang
 </p>
 <p align="center">
     <img src="img/blockchain-logo.png" width="150" title="logo">
