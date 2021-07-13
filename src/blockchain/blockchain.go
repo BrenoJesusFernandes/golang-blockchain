@@ -6,7 +6,7 @@ import (
 )
 
 const (
-	dbPath = "./tmp/blocks"
+	dbPath = "./src/tmp/blocks"
 )
 
 type BlockChain struct {
