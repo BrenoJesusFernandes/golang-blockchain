@@ -3,7 +3,7 @@ package main
 import (
 	"flag"
 	"fmt"
-	"github.com/fernandesbreno/golang-blockchain/blockchain"
+	"golang-blockchain/src/blockchain"
 	"os"
 	"runtime"
 	"strconv"
